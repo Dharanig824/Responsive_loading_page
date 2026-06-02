@@ -1,0 +1,131 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: transparent;
+    transition: 0.4s;
+    z-index: 1000;
+}
+
+/* Navbar after scroll */
+#navbar.scrolled {
+    background: #111827;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.3);
+    padding: 15px 50px;
+}
+
+/* Logo */
+.logo {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Nav Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+/* Nav Items */
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+/* Hover Effect */
+.nav-links li a:hover {
+    background: #00bcd4;
+    color: black;
+}
+
+/* Sections */
+.section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Different Backgrounds */
+.home {
+    background: linear-gradient(to right, #141e30, #243b55);
+}
+
+.about {
+    background: #1e293b;
+}
+
+.services {
+    background: #0f172a;
+}
+
+.contact {
+    background: #334155;
+}
+
+/* Headings */
+.section h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+/* Paragraph */
+.section p {
+    font-size: 22px;
+}
+
+/* Responsive Design */
+@media(max-width: 768px) {
+
+    #navbar {
+        padding: 15px 20px;
+        flex-direction: column;
+    }
+
+    .nav-links {
+        margin-top: 10px;
+        gap: 15px;
+    }
+
+    .section h1 {
+        font-size: 40px;
+    }
+
+    .section p {
+        font-size: 18px;
+    }
+}
